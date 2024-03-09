@@ -53,9 +53,9 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }} #OPTIONAL
 
   BUILD_AND_PUBLISH:
-  needs: Testing  # Creates dependency on earlier job
-  runs-on: ubuntu-latest
-  steps:
+    needs: Testing  # Creates dependency on earlier job
+    runs-on: ubuntu-latest
+    steps:
       - name: Code checkout
         uses: actions/checkout@v4
 
